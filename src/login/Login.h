@@ -40,4 +40,4 @@ namespace NLogin
 			std::string m_strPassword;
 	};
 };
-# endif __LOGIN_H_
+# endif
