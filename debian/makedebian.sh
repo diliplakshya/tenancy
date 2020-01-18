@@ -15,6 +15,8 @@ make_dirs $DEPLOY_ROOT_DIR
 # Create debian build project directory (/home/aspect/hotel_booking)
 make_dirs $PROJECT_DIR
 
+. debian/copy_system_configurations.sh
+
 . debian/copy_build_configurations.sh
 
 . debian/control.sh
