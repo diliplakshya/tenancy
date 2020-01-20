@@ -1,8 +1,13 @@
-#!/bin/sh
-# chkconfig: 35 99 01
-# description: Starts and stops the Hotel Booking System
+#!/bin/bash
 
-# Run 'chkconfig --add hotel_init' (as root) to enable system startup on boot
+### BEGIN INIT INFO
+# Provides:          hotel_init
+# Required-Start:    $remote_fs $syslog
+# Required-Stop:     $remote_fs $syslog
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: Start hotel booking script at boot time
+# Description:       Enable service provided by daemon.
+### END INIT INFO
 
-su - aspect /home/aspect/hotel_booking/bin/init/init.sh
-
+bash /home/aspect/hotel_booking/bin/init/init.sh start $*
