@@ -31,4 +31,4 @@ echo "Creating Debian package"
 
 
 # Now, debian package is created. So remove the debian build directory if exists
-# remove_dirs $DEBIAN_PACKAGE
+remove_dirs $DEBIAN_PACKAGE
