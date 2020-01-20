@@ -4,5 +4,5 @@
 
 # Run 'chkconfig --add hotel_init' (as root) to enable system startup on boot
 
-su - aspect /home/aspect/hotel_booking/bin/init/start.sh
+su - aspect /home/aspect/hotel_booking/bin/init/init.sh
 

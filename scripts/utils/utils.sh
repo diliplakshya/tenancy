@@ -21,3 +21,8 @@ copy_files()
 
 	[ ! -e $DEST ] && echo "Copying '"$SOURCE"' to '"$DEST"'." && /bin/cp $SOURCE $DEST
 }
+
+link()
+{
+	[ ! -e \$2 ] && ln -s \$1 \$2
+}

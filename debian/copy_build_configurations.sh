@@ -20,8 +20,8 @@ copy_configuration_files()
 	# Copy 'login' to '/home/aspect/hotel_booking/login/bin'
 	copy_files $PROJECT_SRC_LOGIN_DIR/login $PROJECT_LOGIN_DIR/login
 
-	# Copy 'start.sh' to '/home/aspect/hotel_booking/bin/init'
-	copy_files $PROJECT_SCRIPT_INIT_DIR/start.sh $PROJECT_INIT_DIR/start.sh
+	# Copy 'init.sh' to '/home/aspect/hotel_booking/bin/init'
+	copy_files $PROJECT_SCRIPT_INIT_DIR/init.sh $PROJECT_INIT_DIR/init.sh
 }
 
 make_configuration_dir
