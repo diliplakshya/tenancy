@@ -3,13 +3,13 @@
 . debian/variable.sh
 . scripts/utils/utils.sh
 
-# Create DEBIAN directory (/home/aspect/hotel_booking/DEBIAN)
+# Create DEBIAN directory (/home/aspect/tenancy/DEBIAN)
 make_dirs $PROJECT_DEBIAN && [ ! -f $PROJECT_CONTROL ] && echo "Creating control file '"$PROJECT_CONTROL"'." && \
 /bin/cat >$PROJECT_CONTROL <<EOF
-Package: HotelBooking
+Package: Tenancy
 Version: 0.1
 Maintainer: Dilip Kumar, <diliplakshya@gmail.com>
-Description: Hotel Booking Application
+Description: Tenancy Application
 Architecture: all
 Section: ControlServer
 Priority: optional

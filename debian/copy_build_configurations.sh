@@ -5,22 +5,22 @@
 
 make_configuration_dir()
 {
-	# Create project bin directory (/home/aspect/hotel_booking/bin)
+	# Create project bin directory (/home/local/tenancy/bin)
 	make_dirs $PROJECT_BIN_DIR
 
-	# Create project init directory (/home/aspect/hotel_booking/bin/init)
+	# Create project init directory (/home/local/tenancy/bin/init)
 	make_dirs $PROJECT_INIT_DIR
 
-	# Create module login directory (/home/aspect/hotel_booking/bin/login)
+	# Create module login directory (/home/local/tenancy/bin/login)
 	make_dirs $PROJECT_LOGIN_DIR
 }
 
 copy_configuration_files()
 {
-	# Copy 'login' to '/home/aspect/hotel_booking/login/bin'
+	# Copy 'login' to '/home/local/tenancy/login/bin'
 	copy_files $PROJECT_LOGIN_MODULE_DIR/login $PROJECT_LOGIN_DIR/login
 
-	# Copy 'init.sh' to '/home/aspect/hotel_booking/bin/init'
+	# Copy 'init.sh' to '/home/local/tenancy/bin/init'
 	copy_files $PROJECT_SCRIPT_INIT_DIR/init.sh $PROJECT_INIT_DIR/init.sh
 }
 
