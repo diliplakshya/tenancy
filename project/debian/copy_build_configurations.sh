@@ -1,6 +1,6 @@
 #!/bin/bash
 
-. debian/variable.sh
+. project/debian/variable.sh
 . scripts/utils/utils.sh
 
 make_configuration_dir()

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-. debian/variable.sh
+. project/debian/variable.sh
 . scripts/utils/utils.sh
 
 # Create etc init.d directory (/etc/init.d)
