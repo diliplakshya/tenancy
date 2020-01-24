@@ -1,6 +1,6 @@
 #!/bin/bash
 
-. project/debian/variable.sh
+source $VARIABLE
 
 
 echo "Creating debian postinst script '"$PROJECT_POST_INSTALL"'." && \

@@ -1,7 +1,7 @@
 #!/bin/bash
 
-. project/debian/variable.sh
-. scripts/utils/utils.sh
+source $VARIABLE
+source $UTILS
 
 # Create DEBIAN directory (/home/aspect/tenancy/DEBIAN)
 make_dirs $PROJECT_DEBIAN && [ ! -f $PROJECT_CONTROL ] && echo "Creating control file '"$PROJECT_CONTROL"'." && \

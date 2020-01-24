@@ -1,7 +1,7 @@
 #!/bin/bash
 
-. project/debian/variable.sh
-. scripts/utils/utils.sh
+source $VARIABLE
+source $UTILS
 
 # Create etc init.d directory (/etc/init.d)
 make_dirs $DEPLOY_ETC_INIT_D_DIR

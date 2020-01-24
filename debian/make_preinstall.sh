@@ -1,6 +1,6 @@
 #!/bin/bash
 
-. project/debian/variable.sh
+source $VARIABLE
 
 
 echo "Creating debian preinst script '"$PROJECT_PRE_INSTALL"'." && \

@@ -1,5 +1,5 @@
 #!/bin/bash
 
-. project/setenv.sh
-. project/compile.sh
-. project/debian/make_debian.sh
+source setenv.sh
+source compile.sh
+source $DEBIAN_PATH/make_debian.sh

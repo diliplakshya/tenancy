@@ -1,7 +1,7 @@
 #!/bin/bash
 
-. project/debian/variable.sh
-. scripts/utils/utils.sh
+source $VARIABLE
+source $UTILS
 
 make_configuration_dir()
 {

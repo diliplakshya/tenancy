@@ -3,8 +3,8 @@
 echo "Building debian package... please wait..."
 echo
 
-. project/debian/variable.sh
-. scripts/utils/utils.sh
+source $VARIABLE
+source $UTILS
 
 # Remove existing debian package directory if exists
 remove_dirs $PACKAGE_DIR
@@ -12,21 +12,17 @@ remove_dirs $PACKAGE_DIR
 # Creating debian package directory if does not exists
 make_dirs $PACKAGE_DIR
 
-# Create debian build deployement root directory (/home/aspect)
+# Create debian build deployement root directory (/home/local)
 make_dirs $DEPLOY_ROOT_DIR
 
-# Create debian build project directory (/home/aspect/hotel_booking)
+# Create debian build project directory (/home/local/tenancy)
 make_dirs $PROJECT_DIR
 
-. project/debian/control.sh
-
-. project/debian/make_preinstall.sh
-
-. project/debian/copy_system_configurations.sh
-
-. project/debian/copy_build_configurations.sh
-
-. project/debian/make_postinstall.sh
+source $MAKE_CONTROL
+source $MAKE_PREINSTALL
+source $COPY_SYS_CONF
+source $COPY_BUILD_CONF
+source $MAKE_POSTINSTALL
 
 # Create Debian package
 echo "Creating Debian package"
