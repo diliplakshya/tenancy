@@ -1,2 +1,2 @@
-# hotel_booking
-Hotel Booking Application
+# tenancy
+Rental Application
