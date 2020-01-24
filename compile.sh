@@ -3,5 +3,32 @@
 echo "Compiling ..."
 echo "**********************************"
 
-make clean -C src/cpp/src/login
-make -C src/cpp/src/login
+ARG=$1
+
+get_path()
+{
+    path="src/cpp/src/login"
+    echo $path
+}
+
+clean()
+{
+    echo "Cleaning files..."
+    VALUE=$( get_path )
+    make clean -C $VALUE
+}
+
+compiling()
+{
+    echo "Compiling source code ..."
+    VALUE=$( get_path )
+    make -C $VALUE    
+}
+
+if [ -z "$ARG" ]; then
+    compiling
+elif [ "$ARG"=="-C" ]; then
+    clean
+else
+    echo "Wrong argument"
+fi
