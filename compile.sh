@@ -5,24 +5,40 @@ echo "**********************************"
 
 ARG=$1
 
-get_path()
-{
-    path="src/cpp/src/login"
-    echo $path
-}
+SRC_DIRS="\
+    src/cpp/src/login \
+    source/myserver \
+    source/myserver2
+"
 
 clean()
 {
-    echo "Cleaning files..."
-    VALUE=$( get_path )
-    make clean -C $VALUE
+    for dir in $SRC_DIRS
+    do
+        if test -d $dir; then
+            do_it "make clean" $dir "Cleaning"
+        fi
+    done
 }
 
 compiling()
 {
-    echo "Compiling source code ..."
-    VALUE=$( get_path )
-    make -C $VALUE    
+    for dir in $SRC_DIRS
+    do
+        if test -d $dir; then
+            do_it "make" $dir "Compiling"
+        fi
+    done   
+}
+
+do_it()
+{
+    action=$1
+    path=$2
+    comment=$3
+
+    echo "$comment for $path"
+    $action -C $path
 }
 
 if [ -z "$ARG" ]; then
