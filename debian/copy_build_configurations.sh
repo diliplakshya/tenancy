@@ -3,6 +3,10 @@
 source $VARIABLE
 source $UTILS
 
+
+TENANCY_HOME=$(pwd)/..
+
+
 make_configuration_dir()
 {
 	# Create project bin directory (/home/local/tenancy/bin)
@@ -18,7 +22,7 @@ make_configuration_dir()
 copy_configuration_files()
 {
 	# Copy 'login' to '/home/local/tenancy/login/bin'
-	copy_files $PROJECT_LOGIN_MODULE_DIR/login $PROJECT_LOGIN_DIR/login
+	copy_files $PROJECT_LOGIN_MODULE_DIR/bin/release/x86_64/login $PROJECT_LOGIN_DIR/login
 
 	# Copy 'init.sh' to '/home/local/tenancy/bin/init'
 	copy_files $PROJECT_SCRIPT_INIT_DIR/init.sh $PROJECT_INIT_DIR/init.sh
