@@ -9,6 +9,9 @@ echo "Creating debian postinst script '"$PROJECT_POST_INSTALL"'." && \
 
 echo "Running postinstall ..."
 
+# Update library search path .eg. for etc/ld.so.conf.d/libtenancy.conf
+ldconfig
+
 sudo update-rc.d tenancy defaults
 
 EOF

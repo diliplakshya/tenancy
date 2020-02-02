@@ -1,10 +1,13 @@
 # include "Login.h"
+# include "PyObjectWrapper.h"
+
 
 using namespace NLogin;
 
 
 UserLogin::UserLogin()
 {
+	PyObjectWrapper oPyObjectWrapper;
 }
 
 UserLogin::~UserLogin()

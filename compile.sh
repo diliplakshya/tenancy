@@ -6,9 +6,9 @@ echo "**********************************"
 ARG=$1
 
 SRC_DIRS="\
-    src/cpp/src/login \
-    source/myserver \
-    source/myserver2
+    src/cpp/lib/CppToPython \
+    src/cpp/src/login
+    
 "
 
 clean()
