@@ -9,7 +9,7 @@ Prerequisites for Development machine;-
 
 To prepare the development machine to compile and create debian package, run following script;-
 
-bash prerequisite/dev_prerequisite.sh
+bash documents/prerequisite/dev_prerequisite.sh
 ---------------------------------------------------------------------------------------------------------------------
 To compile and create package do following;-
 
@@ -19,7 +19,7 @@ Prerequisites for Release/Deployment machine;-
 
 To prepare the release machine, to be able to install debian package, do following in you release machine;-
 
-copy prerequisite/release_prerequisite.sh to your release machine and execute your script.
+copy documents/prerequisite/release_prerequisite.sh to your release machine and execute your script.
 Post this reboot your machine
 ---------------------------------------------------------------------------------------------------------------------
 To install Debian package in Release/Deployment machine;-

@@ -1,0 +1,91 @@
+New Application to be developed.
+
+Technologies to be used.
+
+C++
+Qt for GUI
+Python
+Linux OS
+Shell script
+DB (MySql)
+Debian package
+Dynamic library
+Unit Test Cases (Python)
+Interprocess communication
+Monit
+Command like application like AspectControl to accept arguments
+Git
+Setting Python Path
+FTP/SFTP
+UML diagram
+Notification on email
+Internationalization
+Continous Integration, Heroku
+Django
+Use JSON as config file
+HTML
+CSS
+Multiple executables, multiple processes running (IPC)
+Running processes infinitely
+Use notification on some action
+Create a shell script to install all required packages for DEV and release machine.
+Should display the status of all processes. Like in Honeywell Machine status, monit status, LWT status.
+Should have an option to update the application
+Should support both 64 and 32 bit OS architecture
+Should support Python 2.7 and 3.4 while write Cpp Python interface
+Use Config file/different config files. Parse them using shell scripting like done in Airport project in Honeywell.
+Use Corba
+
+C++ Features to be included;-
+	- Thread, Mutex, Semaphore, Events in Linux
+	
+Python Features to be included;-
+	- SSH remote connection
+	- Files download
+	- Rsync
+	- Thread
+	- Processes
+	- Virtual environement
+	
+Future improvements;-
+	- WEB APPlication
+	- REST API
+	
+-------------------------------------------------------------
+Ideas;-
+	 An event-alert system using Meetup and Eventbrite APIs
+	 TO Do list
+	 Restaurant Software / Billing System
+	 Chat application
+	 Hotel Reservation System
+	 Family Tree Creator
+-------------------------------------------------------------
+Hotel Info
+Room Info
+Customer profile
+Branches
+Loging => User, Agent, Admin
+Pictures
+Review, Feedback
+Notification
+Booking, Payment, Cancellation
+Staff, Info, Salary, Performance, Hiring, HR
+Fire drill, Fire Service
+Emergency Info
+Locking, Unlocking, Smart Card for locking/unlocking
+Electricians
+Plumbers
+Police Complains
+Complains against hotel, staff
+
+3rd Party ;-
+	Food
+	Laundry
+	Cab
+	Tourism
+	Internet
+	Entertainment
+	Cleaning
+	Washing
+	Medicine/Doctor
+	Grooming/Beauty Parlour Service

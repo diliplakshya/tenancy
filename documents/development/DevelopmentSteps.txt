@@ -1,0 +1,76 @@
+https://github.com/diliplakshya/hotel_booking.git
+
+
+Steps for application developement;-
+
+- Install a Ubuntu 14.04 LTS
+- Install git, add git ignore for C++, Python, Linux
+- Install a development IDE
+- Create/clone a repository
+- Create a directory structure for your application
+- Create make file for a particular feature. Say Login
+- Create an exe for a particular feature. Say Login
+- Create an script directory and create a shell script named start.sh
+- Create debian directory to create debian package and create recommended shell scripts.
+
+Debian Package;-
+	- Create target machine directory structure in debian package
+
+Start Up script;-
+	- Create a start up script which you would like be called on system start up. E.g. init.sh
+	- Do not forget to add '#!/bin/bash' at the top of script.
+	- Make sure it has got executable rights.
+	- This script should have start and stop function. Should support start stop and restart argument. 
+	- Make it part of debian package. Deploy it to any directory of your choice.
+
+System Boot script;-
+	- Create a start up script which will be called when system boots up. E.g. hotel_init
+	- Do not forget to add '#!/bin/bash' at the top of script.
+	- Make sure it has got executable rights.
+	- This script must have a predefined header like this...
+		### BEGIN INIT INFO
+		# Provides:          hotel_init
+		# Required-Start:    $remote_fs $syslog
+		# Required-Stop:     $remote_fs $syslog
+		# Default-Start:     2 3 4 5
+		# Default-Stop:      0 1 6
+		# Short-Description: Start hotel booking script at boot time
+		# Description:       Enable service provided by daemon.
+		### END INIT INFO
+	- Make it part of debian package. Deploy it to /etc/init.d directory
+	- Call your start up script (e.g. init.sh) from this script.
+	- Run 'sudo update-rc.d hotel_init defaults' using postinstall script.
+
+System Boot config file;-
+	- This is probably optional.
+	- Create a conf file same name as system boot script.
+	- Contents of this script should have predefined structure. E.g. hotel_init.conf
+	- Make it part of debian package. Deploy it to /etc/init directory
+	- Call your start up script (e.g. init.sh) from this script.
+
+GitIgnore;-
+	- object file, *.gch, package directory
+
+Compilation and building debian package;-
+	- Create a setenv.sh to set environment variable
+	- Create a compile.sh to run make command for all source directory
+	- Create a build.sh. It will call setenv.sh, compile.sh and build_debian.sh
+
+Create a prerequisite directory;-
+	- Add prerequisite shell scripts for dev and release machine separately.
+
+Python C API;-
+	- Need to install Python-dev package.
+	- This is to get '/usr/include/python3.5/Python.h' file and python C API library '/usr/lib/x86_64-linux-gnu/libpython3.5m.so' (Embedding python into CPP)
+	- If we are using default/ubuntu python or we installed Python using apt-get command, then we should install python-dev packages using apt-get command.
+	- If we installed our own Python version, then we should install python-dev packages using pip command.
+
+Shared Library;-
+	- Create a shared lib for CppToPython
+	- To compile CPP file use option '-fpic'
+	- To create shared library use option '-shared'
+
+Add library search path;-
+	- Create a file called /etc/ld.so.conf.d/<name>.conf
+	- Add your path in this file
+	- Run the following command to activate path: 'ldconfig'
