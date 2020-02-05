@@ -32,7 +32,7 @@ Create a shell script to install all required packages for DEV and release machi
 Should display the status of all processes. Like in Honeywell Machine status, monit status, LWT status.
 Should have an option to update the application
 Should support both 64 and 32 bit OS architecture
-Should support Python 2.7 and 3.4 while write Cpp Python interface
+Should support Python 2.7 and 3.4 while write Cpp Python interface. This should be an external. Should be used in other application.
 Use Config file/different config files. Parse them using shell scripting like done in Airport project in Honeywell.
 Use Corba
 
