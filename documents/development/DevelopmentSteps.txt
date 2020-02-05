@@ -67,8 +67,10 @@ Python C API;-
 
 Shared Library;-
 	- Create a shared lib for CppToPython
+	- Added it as git submodule
 	- To compile CPP file use option '-fpic'
 	- To create shared library use option '-shared'
+
 
 Add library search path;-
 	- Create a file called /etc/ld.so.conf.d/<name>.conf
