@@ -2,8 +2,8 @@ TENANCY_HOME = $(shell pwd)/../../../..
 
 include $(TENANCY_HOME)/makefile/MakeVars.in
 
-INCL = -I/home/local/Documents/tenancy/src/cpp/lib/CppToPython -I/usr/include/python3.5
-LIB = -L/home/local/Documents/tenancy/src/cpp/lib/CppToPython/bin/release/x86_64 -lcpptopython -L/usr/lib/x86_64-linux-gnu -lpython3.5m
+INCL = -I/home/local/Documents/tenancy/src/cpp/lib/CppToPython/src -I/usr/include/python3.5
+LIB = -L/home/local/Documents/tenancy/src/cpp/lib/CppToPython/src/bin/release/x86_64 -lcpptopython -L/usr/lib/x86_64-linux-gnu -lpython3.5m
 
 
 $(objdir)/login: $(objdir)/Login.o $(objdir)/main.o
