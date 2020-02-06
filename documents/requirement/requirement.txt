@@ -35,6 +35,7 @@ Should support both 64 and 32 bit OS architecture
 Should support Python 2.7 and 3.4 while write Cpp Python interface. This should be an external or in the form of debian package. Should be used in other application.
 Use Config file/different config files. Parse them using shell scripting like done in Airport project in Honeywell.
 Use Corba
+Use relative path in Makefile instead of full path
 
 C++ Features to be included;-
 	- Thread, Mutex, Semaphore, Events in Linux

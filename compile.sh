@@ -6,7 +6,7 @@ echo "**********************************"
 ARG=$1
 
 SRC_DIRS="\
-    src/cpp/lib/CppToPython \
+    src/cpp/lib/CppToPython/src \
     src/cpp/src/login
     
 "

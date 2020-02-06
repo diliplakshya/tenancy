@@ -11,7 +11,7 @@ $(objdir)/login: $(objdir)/Login.o $(objdir)/main.o
 $(objdir)/Login.o: Login.h Login.cpp
 	(mkdir -p $(objdir); cd $(objdir); g++ -c $(INCL) $(LIB) ../../../Login.h ../../../Login.cpp)
 $(objdir)/main.o: main.cpp
-	(mkdir -p $(objdir); cd $(objdir); g++ -c ../../../main.cpp)
+	(mkdir -p $(objdir); cd $(objdir); g++ -c $(INCL) $(LIB) ../../../main.cpp)
 clean:
 	(rm *.gch; mkdir -p $(objdir); cd $(objdir); rm *.o login)
 
