@@ -11,7 +11,7 @@ LDFLAGS = -L$(SRC_LIB_DIR) -lcpptopython -L/usr/lib/x86_64-linux-gnu -lpython3.5
 DEP = $(CPPFLAGS) $(LDFLAGS)
 
 $(objdir)/login: $(objdir)/Login.o $(objdir)/main.o
-	(mkdir -p $(objdir); cd $(objdir); g++ $(LDFLAGS) -o login Login.o main.o; rm *.o)
+	(mkdir -p $(objdir); cd $(objdir); g++ $(LDFLAGS) -o login Login.o main.o $(LDFLAGS); rm *.o)
 $(objdir)/Login.o: Login.h Login.cpp
 	(mkdir -p $(objdir); cd $(objdir); g++ -c $(DEP) ../../../Login.h ../../../Login.cpp)
 $(objdir)/main.o: main.cpp
