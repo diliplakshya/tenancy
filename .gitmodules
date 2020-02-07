@@ -1,3 +1,6 @@
 [submodule "src/cpp/lib/CppToPython"]
 	path = src/cpp/lib/CppToPython
 	url = https://github.com/diliplakshya/cpp-to-python.git
+[submodule "src/python/lib/DBConnector"]
+	path = src/python/lib/DBConnector
+	url = git@github.com:diliplakshya/db-connector.git
