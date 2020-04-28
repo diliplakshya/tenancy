@@ -44,7 +44,7 @@ System Boot script;-
 System Boot config file;-
 	- This is probably optional.
 	- Create a conf file same name as system boot script.
-	- Contents of this script should have predefined structure. E.g. hotel_init.conf
+	- Contents of this script should have predefined structure. E.g. tenancy.conf
 	- Make it part of debian package. Deploy it to /etc/init directory
 	- Call your start up script (e.g. init.sh) from this script.
 
@@ -64,13 +64,15 @@ Python C API;-
 	- This is to get '/usr/include/python3.5/Python.h' file and python C API library '/usr/lib/x86_64-linux-gnu/libpython3.5m.so' (Embedding python into CPP)
 	- If we are using default/ubuntu python or we installed Python using apt-get command, then we should install python-dev packages using apt-get command.
 	- If we installed our own Python version, then we should install python-dev packages using pip command.
+    - Update makefile to add Python.h and Python lib path.
+	- CPPFLAGS = -I$(SRC_INCLUDE_DIR) -I/usr/include/python3.7
+    - LDFLAGS = -L$(SRC_LIB_DIR) -lcpptopython -L/usr/lib/x86_64-linux-gnu -lpython3.7m
 
 Shared Library;-
 	- Create a shared lib for CppToPython
 	- Added it as git submodule
 	- To compile CPP file use option '-fpic'
 	- To create shared library use option '-shared'
-
 
 Add library search path;-
 	- Create a file called /etc/ld.so.conf.d/<name>.conf

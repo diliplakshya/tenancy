@@ -3,7 +3,7 @@
 #include "Login.h"
 
 
-using namespace AspectTraffic;
+using namespace NCppPython;
 using namespace NLogin;
 
 
@@ -11,13 +11,13 @@ UserLogin::UserLogin()
 {
 	PythonObjectWrapper oPythonObjectWrapper;
 
-	//PythonInterpreter::initializeInterpreter();
+	PythonInterpreter::initializeInterpreter();
 
-	//CppToPythonInterface oCppToPythonInterface;
+	CppToPythonInterface oCppToPythonInterface;
 
-	//PythonObjectWrapper oImportModule;
+	PythonObjectWrapper oImportModule;
 
-	//oCppToPythonInterface.importPythonModule("db_helper", oImportModule);
+	oCppToPythonInterface.importPythonModule("db_helper", oImportModule);
 }
 
 UserLogin::~UserLogin()
