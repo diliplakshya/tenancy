@@ -1,4 +1,4 @@
-https://github.com/diliplakshya/hotel_booking.git
+https://github.com/diliplakshya/tenancy.git
 
 
 Steps for application developement;-

@@ -2,7 +2,7 @@ TENANCY_HOME = $(shell pwd)/../../../..
 
 include $(TENANCY_HOME)/makefile/MakeVars.in
 
-SRC_INCLUDE_DIR = /home/local/Documents/tenancy/src/cpp/lib/CppToPython/src
+SRC_INCLUDE_DIR = $(TENANCY_HOME)/src/cpp/lib/CppToPython/src
 SRC_LIB_DIR = $(SRC_INCLUDE_DIR)/bin/release/x86_64
 
 CPPFLAGS = -I$(SRC_INCLUDE_DIR) -I/usr/include/python3.5
