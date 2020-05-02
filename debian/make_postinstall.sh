@@ -14,5 +14,7 @@ ldconfig
 
 sudo update-rc.d tenancy defaults
 
+mysql -u local -plocal. < /home/local/tenancy/bin/init/init.sql > /tmp/output.txt 2>&1
+
 EOF
 /bin/chmod +x $PROJECT_POST_INSTALL

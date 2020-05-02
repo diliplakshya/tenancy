@@ -1,5 +1,6 @@
 #include "PythonInterpreter.h"
 #include "CppToPythonInterface.h"
+#include "CppPythonUtils.h"
 #include "Login.h"
 
 
@@ -18,6 +19,20 @@ UserLogin::UserLogin()
 	PythonObjectWrapper oImportModule;
 
 	oCppToPythonInterface.importPythonModule("db_helper", oImportModule);
+
+	CppPythonUtils utils;
+
+	PythonObjectWrapper username;
+	PythonObjectWrapper password;
+
+	utils.constructPythonString("dilip", username);
+	utils.constructPythonString("secret", password);
+
+	PythonObjectWrapper outputTuple;
+	int code;
+	char* message;
+	
+	oCppToPythonInterface.callMethod("db_function", oImportModule, outputTuple, code, message);
 }
 
 UserLogin::~UserLogin()

@@ -3,15 +3,15 @@
 start()
 {
 	echo "Start is called *****"
-	# /home/local/tenancy/bin/login/login
-	/usr/bin/touch /home/local/tenancy/bin/init/tempstart.txt
+	/home/local/tenancy/bin/login/login
+	# /usr/bin/touch /home/local/tenancy/bin/init/tempstart.txt
 }
 
 stop()
 {
 	echo "Stop is called *****"
 	# /home/local/tenancy/bin/login/login
-	/usr/bin/touch /home/local/tenancy/bin/init/tempstop.txt
+	# /usr/bin/touch /home/local/tenancy/bin/init/tempstop.txt
 }
 
 case "$1" in

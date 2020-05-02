@@ -32,6 +32,12 @@ copy_configuration_files()
 
 	# Copy 'init.sh' to '/home/local/tenancy/bin/init'
 	copy_files $PROJECT_SCRIPT_INIT_DIR/init.sh $PROJECT_INIT_DIR/init.sh
+
+	# Copy 'init.sql' to '/home/local/tenancy/bin/init'
+	copy_files $PROJECT_SCRIPT_INIT_DIR/init.sql $PROJECT_INIT_DIR/init.sql
+
+	# Copy 'db_helper.py' to '/home/local/tenancy/bin/login'
+	copy_files $PROJECT_PYTHON_SRC_DIR/db_helper.py $PROJECT_LOGIN_DIR/db_helper.py	
 }
 
 make_configuration_dir
